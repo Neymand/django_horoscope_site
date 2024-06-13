@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Гороскоп для {{sign|upper}}
+{% endblock %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'horoscope/css/info.css'%}">
+{% endblock %}
+
+{% block content %}
+    {% include 'includes/navbar.html' %}
+    <h1>{{sign_name}}</h1>
+
+    <h1>Гороскоп</h1>
+    <h2> {{description_zodiac}} </h2>
+{% endblock %}
